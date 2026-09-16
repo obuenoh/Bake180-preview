@@ -200,7 +200,6 @@ h1,h2,h3,h4{font-family:var(--font-display);margin:0;letter-spacing:-.03em;text-
 
 /* ---------- Categorias ---------- */
 .cats{display:grid;gap:var(--s-4);grid-template-columns:repeat(2,1fr)}
-@media(min-width:60rem){.cats{grid-template-columns:repeat(4,1fr);gap:var(--s-5)}}
 .cat{position:relative;border:var(--bwt) solid var(--tinta);background:var(--massa);
   box-shadow:var(--sh-sm);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;
   transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
@@ -214,6 +213,13 @@ h1,h2,h3,h4{font-family:var(--font-display);margin:0;letter-spacing:-.03em;text-
   display:flex;justify-content:space-between;align-items:center;gap:var(--s-2)}
 .cat__b b{font-family:var(--font-display);text-transform:uppercase;font-size:1.15rem;letter-spacing:-.02em}
 .cat__b span{font-size:var(--fs-sm);color:var(--tinta-60);font-weight:600}
+
+@media(min-width:60rem){
+  .cats{grid-template-columns:repeat(4,1fr);gap:var(--s-5)}
+  .cat__m{aspect-ratio:4/5}
+  .cat__m img,.cat img{aspect-ratio:4/5}
+  .cat__b{padding:var(--s-3) var(--s-4)}
+}
 
 /* ---------- Card de produto ---------- */
 .grid{display:grid;gap:var(--s-4);grid-template-columns:repeat(2,1fr)}
